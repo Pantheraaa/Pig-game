@@ -1,0 +1,237 @@
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    padding-top: 5rem;
+    background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);    
+}
+
+section {
+    margin: auto;
+    height: 80vh;
+    width: 65%;
+    border-radius: 10px;
+    
+    display: flex;
+
+    background-color: rgba(255, 255, 255, 0.35);
+    filter: blur();
+    backdrop-filter: blur(200px);
+    overflow: hidden;
+    box-shadow: 0 3rem 5rem rgba(0 0 0 / 25%);
+}
+
+article {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active {
+    background-color: rgba(255, 255, 255, 0.4);
+    transition: 4ms ease-in-out;
+}
+
+.winner {
+    background-color: rgba(0, 0, 0, 0.852);
+    color: #fecd1a;
+}
+
+.player {
+    /* border: 2px solid black; */
+    height: 80%;
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    letter-spacing: 1px;
+}
+
+h2 {
+    margin-top: 2rem;
+    font-size: 32px;
+}
+
+.score {
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 80px;
+    color: #c7365f;
+}
+
+.current {
+    border-radius: 10px;
+    background-color: #c7365f;
+    height: 5rem;
+    width: 10rem;
+    position: absolute;
+    left: 50%;
+    bottom: 3rem;
+    transform: translate(-50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    font-weight: 500;
+    color: #fff;
+}
+
+.current-score {
+    font-size: xx-large;
+}
+
+.img {
+    display: none;
+    height: 5rem;
+    width: 5.5rem;
+    background-image: url('./dice-1.png');
+    background-position: center;
+    background-size: cover;
+
+    position: absolute;
+    top: 15rem;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+button {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    height:3rem;
+    width: 10rem;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    filter: blur();
+    backdrop-filter: blur(400px);
+    font-size: large;
+    cursor: pointer;
+}
+
+/* button:active {
+    transition: 1s ease-in-out;
+    font-size: medium;
+    height: 2rem;
+    width: 8rem;
+} */
+
+.btn--new {
+    top: 8rem;
+}
+
+.btn--roll {
+    bottom: 13.5rem;
+}
+
+.btn--hold {
+    bottom: 10rem;
+    width: 7rem;
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+    section {
+        width: 100%;
+        height: 50vh;
+    }
+
+    .player {
+        height: 95%;
+    }
+
+    .current {
+        bottom: 2rem
+    }
+
+    button {
+        font-size: small;
+        width: 7rem;
+        height: 2rem;
+        transform: translate(0%);
+    }
+    
+    .btn--new {
+        top: 3rem;
+        left: 0;
+    }
+    
+    .btn--roll {
+        position: relative;
+        bottom: 0rem;
+        transform: translate(-50%);
+    }
+    
+    .btn--hold {
+        position: relative;
+        transform: translate(-175%);
+        bottom: -2.5rem;
+        right: 0rem;
+        width: 6rem;
+    }
+
+    .img {
+        top: 8rem
+    }
+
+    .score {
+        font-size: 55px;
+    }
+    
+}
+    @media screen and (min-width: 601px) and (max-width: 900px) {
+        main {
+            padding-top: 3rem;
+        }
+
+        section {
+            height: 80vh;
+        }
+
+        .current {
+            bottom: 0;
+        }
+
+        .score {
+            margin-top: 0rem;
+            font-size: 65px;
+        }
+        .btn--roll {
+            bottom: 2rem;
+        }
+        .btn--hold {
+            bottom: 4.2rem;
+            width: 7rem;
+        }
+        .btn--new {
+            top: 4rem;
+        }
+        button {
+            position: absolute;
+            left: 50%;
+            transform: translate(-50%);
+            height: 2rem;
+            width: 8rem;
+            border-radius: 20px;
+            border: 1px solid transparent;
+            filter: blur();
+            backdrop-filter: blur(400px);
+            font-size: medium;
+            cursor: pointer;
+        }
+    }
